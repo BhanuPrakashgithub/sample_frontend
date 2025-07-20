@@ -10,7 +10,7 @@ interface Jokestype {
 function GetJokes() {
     const [jokes, setJokes] = useState<Jokestype[]>([]);
     useEffect(() => {
-        axios.get("/api/jokes")
+        axios.get("https://sample-backend-rwue.onrender.com/api/jokes")
         .then((response) => {
             console.log(response);
             setJokes(response.data) ;
